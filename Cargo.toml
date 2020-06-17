@@ -1,7 +1,7 @@
 [package]
 name = "img-parts"
 version = "0.1.0" # remember to update html_root_url
-authors = ["Paolo Barbolini <paolo@paolo565.org>"]
+authors = ["Paolo Barbolini <paolo@paolo565.org>", "Leonard Rosenthol <lrosenth@adobe.com>"]
 description = "Low level crate for reading and writing Jpeg and RIFF image containers"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/paolobarbolini/img-parts"
@@ -12,6 +12,7 @@ edition = "2018"
 
 exclude = [
     "tests/",
+    "examples/*"
 ]
 
 [dependencies]
