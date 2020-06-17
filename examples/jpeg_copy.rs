@@ -22,18 +22,15 @@ fn main() {
         input.clone()
     };
 
-	// let input = "P1133897.jpg";
     let file = fs::read(format!("tests/images/{}", input)).expect("read jpeg");
 
 	let jpeg = Jpeg::read(&mut &file[..]).expect("parse jpeg");
-
 
 	let icc_profile = jpeg.icc_profile();
 	println!("EXIF: {:?}", icc_profile);
 
 	let exif_meta = jpeg.exif();
 	println!("ICC: {:?}", exif_meta);
-
 
     let file_stem = Path::new(&input).file_stem();
     let out_path = format!("{}{}.jpg", output, file_stem.unwrap().to_str().unwrap());
